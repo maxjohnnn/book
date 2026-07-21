@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Landing Page</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#0d2230;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+padding:20px;
+}
+
+.container{
+width:100%;
+max-width:420px;
+text-align:center;
+}
+
+.logo{
+width:150px;
+height:150px;
+border-radius:50%;
+background:#fff;
+padding:8px;
+object-fit:cover;
+margin-bottom:20px;
+}
+
+h1{
+color:#6bff66;
+font-size:34px;
+margin-bottom:25px;
+}
+
+.btn{
+display:block;
+background:#66d0df;
+color:#fff;
+text-decoration:none;
+padding:18px;
+font-size:24px;
+font-weight:bold;
+border-radius:18px;
+border:3px solid #fff;
+box-shadow:0 0 25px #66d0df;
+margin-bottom:30px;
+}
+
+.timer{
+color:#fff;
+font-size:24px;
+margin-bottom:25px;
+}
+
+#count{
+font-size:70px;
+font-weight:bold;
+display:block;
+}
+
+.card{
+background:#fff;
+color:#222;
+padding:18px;
+border-radius:15px;
+margin:14px 0;
+font-size:20px;
+font-weight:bold;
+box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+
+.footer{
+color:#bbb;
+margin-top:25px;
+font-size:15px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="logo.png" class="logo">
+
+<h1>Global Book Publication</h1>
+
+<a class="btn" id="joinBtn" href="#">
+JOIN TELEGRAM
+</a>
+
+<div class="timer">
+Redirect In
+<span id="count">07</span>
+Seconds
+</div>
+
+<div class="card">📚 Online Writing Platform</div>
+
+<div class="card">🏠 Work From Home 100% Trusted</div>
+
+<div class="card">🎓 For Students & Housewives</div>
+
+<div class="card">💰 Advance Salary After Registration</div>
+
+<div class="card">⏰ 24×7 Platform Available</div>
+
+<div class="footer">
+Ads Managed By Your Agency
+</div>
+
+</div>
+
+<script>
+
+const telegram="https://t.me/YourTelegramUsername";
+
+document.getElementById("joinBtn").href=telegram;
+
+let time=7;
+
+const counter=document.getElementById("count");
+
+const timer=setInterval(()=>{
+
+time--;
+
+counter.innerHTML=time;
+
+if(time<=0){
+
+clearInterval(timer);
+
+window.location.href=telegram;
+
+}
+
+},1000);
+
+</script>
+
+</body>
+</html>
